@@ -1,0 +1,7 @@
+
+- Create filtering system where you can click on a problem's category which will then filter the problems with that category
+- Finish implementing search feature
+- Add more problems!
+- Add explanations and tutorials for how the code works
+- Find a way to make the code snippets look better
+- Sort the problems from low to high by id

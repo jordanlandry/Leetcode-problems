@@ -36,3 +36,12 @@
 /* Homepage */
 .link-wrapper {
 }
+
+/* Components */
+.category {
+  margin-left: 10px;
+  background-color: rgb(240, 240, 240);
+  padding: 4px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}

@@ -1,4 +1,4 @@
-export default function q994(grid) {
+export default function q994(params) {
   const orangesRotting = function (grid) {
     const queue = [];
     const N = grid.length;
@@ -42,7 +42,7 @@ export default function q994(grid) {
     return freshCount === 0 ? time : -1;
   };
 
-  return orangesRotting(grid);
+  return orangesRotting(params[0]);
 }
 
 export const cases994 = [

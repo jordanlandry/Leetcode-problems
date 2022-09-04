@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CodeBlock, dracula } from "react-code-blocks";
 import { useParams } from "react-router";
 import data from "../data/data";
 import Code from "./Code";
@@ -25,7 +26,6 @@ export default function Problem() {
     let t1 = performance.now();
     question[0].testCases.forEach((test: any) => {
       const { input, output } = test;
-
       if (JSON.stringify(question[0].code(input)) === JSON.stringify(output))
         correctCount++;
     });
@@ -48,7 +48,15 @@ export default function Problem() {
             {showCode ? "Hide" : "Show"} Code
           </span>
         </div>
-        {showCode ? <Code text={question[0].code.toString()} /> : null}
+        {showCode ? (
+          <Code text={question[0].code.toString()} />
+        ) : (
+          <CodeBlock
+            text={question[0].code.toString()}
+            language="javascript"
+            theme={dracula}
+          />
+        )}
 
         <div className="section">
           {hasTestRan ? (
@@ -69,7 +77,23 @@ export default function Problem() {
                     </span>
                   </p>
                 </div>
-              ) : null}
+              ) : (
+                <div className="text-medium">
+                  <div className="text-fail text-bigger">Failed</div>
+                  <p>
+                    <span className="text-thin text-light">
+                      Completed{" "}
+                      <span className="text-dark text-bigger">
+                        {completedTests} / {question[0].testCases.length}{" "}
+                      </span>
+                      tests
+                    </span>
+                  </p>
+                  <a className="link" href="#" target="_blank">
+                    View failed test
+                  </a>
+                </div>
+              )}
             </div>
           ) : null}
           <button className="button text-medium" onClick={runTests}>

@@ -7,7 +7,7 @@ export default function GoBack({}: Props) {
   const nav = useNavigate();
   return (
     <div className="clickable text-biggest" onClick={() => nav(-1)}>
-      GoBack
+      Go Back
     </div>
   );
 }

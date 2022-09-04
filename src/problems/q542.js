@@ -1,4 +1,4 @@
-export default function q542(mat) {
+export default function q542(params) {
   function updateMatrix(mat) {
     const queue = [];
 
@@ -36,7 +36,7 @@ export default function q542(mat) {
 
     return mat;
   }
-  return updateMatrix(mat);
+  return updateMatrix(params[0]);
 }
 
 export const cases542 = [

@@ -120,3 +120,14 @@ body {
   text-decoration: underline;
   color: var(--link-hov);
 }
+
+/* Position */
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-jusitfy {
+  display: flex;
+  justify-content: center;
+}

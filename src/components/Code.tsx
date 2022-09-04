@@ -34,6 +34,7 @@ export default function Code({ text }: Props) {
     "continue;",
     "else",
   ];
+
   const content = [];
   let currentLine = "";
 
