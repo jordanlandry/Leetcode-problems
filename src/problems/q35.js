@@ -1,4 +1,4 @@
-export default function q994(params) {
+export default function q35(params) {
   const searchInsert = function (nums, target) {
     if (target > nums[nums.length - 1]) return nums.length;
     if (target < nums[0]) return 0;

@@ -26,6 +26,7 @@ export default function Problem() {
     let t1 = performance.now();
     question[0].testCases.forEach((test: any) => {
       const { input, output } = test;
+      console.log(question[0].code(input));
       if (JSON.stringify(question[0].code(input)) === JSON.stringify(output))
         correctCount++;
     });

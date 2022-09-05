@@ -92,6 +92,19 @@ body {
   color: black;
 }
 
+/* Difficulties */
+.diff-easy {
+  color: rgb(15, 145, 130);
+}
+
+.diff-medium {
+  color: rgb(240, 180, 30);
+}
+
+.diff-hard {
+  color: rgb(215, 50, 85);
+}
+
 /* Sections */
 .section {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
@@ -114,6 +127,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: var(--link-fg);
+  transition: 100ms;
 }
 
 .link:hover {
@@ -130,4 +144,9 @@ body {
 .flex-jusitfy {
   display: flex;
   justify-content: center;
+}
+
+/* Margin */
+.m-left-med {
+  margin-left: 10px;
 }

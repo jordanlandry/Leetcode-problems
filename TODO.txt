@@ -5,3 +5,4 @@
 - Add explanations and tutorials for how the code works
 - Find a way to make the code snippets look better
 - Sort the problems from low to high by id
+- Add view failed test
