@@ -1,7 +1,19 @@
-import React from "react";
+type Props = { name: string; setFilters: any };
 
-type Props = { name: string };
+export default function Category({ name, setFilters }: Props) {
+  const handleSetFilters = () => {
+    setFilters((prev: any) => {
+      if (prev.includes(name)) return prev;
+      return [...prev, name];
+    });
+  };
 
-export default function Category({ name }: Props) {
-  return <span className="category text-normal">{name}</span>;
+  return (
+    <span
+      className="category text-normal pointer capitalize"
+      onClick={handleSetFilters}
+    >
+      {name}
+    </span>
+  );
 }
