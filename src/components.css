@@ -1,5 +1,5 @@
 /* Code blocks */
-.code--keyword {
+/* .code--keyword {
   color: rgb(115, 193, 201);
 }
 
@@ -23,12 +23,12 @@
   display: inline-block;
   margin-left: 10px;
   margin-top: 3px;
-}
+} */
 
 .code--wrapper {
-  background-color: rgb(33, 33, 33);
-  color: white;
-  padding: 10px;
+  /* background-color: rgb(33, 33, 33); */
+  /* color: white; */
+  /* padding: 10px; */
   font-size: 1rem;
   font-family: "JetBrains Mono", monospace;
 }

@@ -48,9 +48,11 @@ export default function q994(params) {
 export const cases994 = [
   {
     input: [
-      [2, 1, 1],
-      [1, 1, 0],
-      [0, 1, 1],
+      [
+        [2, 1, 1],
+        [1, 1, 0],
+        [0, 1, 1],
+      ],
     ],
     output: 4,
   },

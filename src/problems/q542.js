@@ -42,9 +42,11 @@ export default function q542(params) {
 export const cases542 = [
   {
     input: [
-      [0, 0, 0],
-      [0, 1, 0],
-      [0, 0, 0],
+      [
+        [0, 0, 0],
+        [0, 1, 0],
+        [0, 0, 0],
+      ],
     ],
     output: [
       [0, 0, 0],

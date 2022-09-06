@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { CodeBlock, dracula } from "react-code-blocks";
+import { CodeBlock, hybrid } from "react-code-blocks";
 import { useParams } from "react-router";
 import data from "../data/data";
 import Code from "./Code";
 import GoBack from "./GoBack";
+import Ide from "./Ide";
 
 export default function Problem() {
   const [showCode, setShowCode] = useState(true);
   const [completedTests, setCompletedTests] = useState(0);
   const [hasTestRan, setHasTestRan] = useState(false);
   const [timeToComplete, setTimeToComplete] = useState(0);
+  const [isCoding, setIsCoding] = useState(false);
 
   const { number } = useParams();
   const question = data.filter((q) => q.id.toString() === number);
@@ -26,7 +28,6 @@ export default function Problem() {
     let t1 = performance.now();
     question[0].testCases.forEach((test: any) => {
       const { input, output } = test;
-      console.log(question[0].code(input));
       if (JSON.stringify(question[0].code(input)) === JSON.stringify(output))
         correctCount++;
     });
@@ -50,14 +51,15 @@ export default function Problem() {
           </span>
         </div>
         {showCode ? (
-          <Code text={question[0].code.toString()} />
-        ) : (
-          <CodeBlock
-            text={question[0].code.toString()}
-            language="javascript"
-            theme={dracula}
-          />
-        )}
+          <div className="code--wrapper">
+            <CodeBlock
+              text={question[0].code.toString()}
+              language="javascript"
+              theme={hybrid}
+            />
+          </div>
+        ) : // <Code text={question[0].code.toString()} />
+        null}
 
         <div className="section">
           {hasTestRan ? (
@@ -100,6 +102,16 @@ export default function Problem() {
           <button className="button text-medium" onClick={runTests}>
             Run Tests
           </button>
+        </div>
+
+        <div className="section">
+          <button
+            className="button-1 text-medium"
+            onClick={() => setIsCoding(true)}
+          >
+            Try It Yourself
+          </button>
+          {isCoding ? <Ide /> : null}
         </div>
 
         <div className="section">
