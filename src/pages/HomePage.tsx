@@ -6,16 +6,20 @@ import Search from "../components/Search";
 import data from "../data/data";
 
 export default function HomePage() {
+  const MAX_DISTANCE = 2; // Maximum Levenshtein distance
+
   const [filters, setFilters] = useState<string[]>([]);
+  const [search, setSearch] = useState("");
 
   const aEl = data
     .sort((a, b) => a.id - b.id)
     .filter((a) => {
-      if (!filters[0]) return true;
+      if (!filters[0] && !search) return true;
 
       for (let i = 0; i < filters.length; i++) {
         if (a.categories.includes(filters[i])) return true;
       }
+
       return false;
     })
     .map((q) => {
@@ -50,11 +54,9 @@ export default function HomePage() {
     );
   });
 
-  console.log(filters);
-
   return (
     <div className="page">
-      <Search />
+      <Search search={search} setSearch={setSearch} />
       <div className="section">
         <div className="text-medium">Filters</div>
         {filterElements}
