@@ -61,48 +61,52 @@ export default function Problem() {
         ) : // <Code text={question[0].code.toString()} />
         null}
 
-        <div className="section">
-          {hasTestRan ? (
-            <div className="text-medium">
-              {completedTests === question[0].testCases.length ? (
-                <div>
-                  <div className="text-success text-bigger">Success</div>
-                  <p>
-                    <span className="text-thin text-light">
-                      Completed{" "}
-                      <span className="text-dark text-bigger">
-                        {completedTests} / {question[0].testCases.length}{" "}
+        {question[0].testCases[0].input[0] ? (
+          <div className="section">
+            {hasTestRan ? (
+              <div className="text-medium">
+                {completedTests === question[0].testCases.length ? (
+                  <div>
+                    <div className="text-success text-bigger">Success</div>
+                    <p>
+                      <span className="text-thin text-light">
+                        Completed{" "}
+                        <span className="text-dark text-bigger">
+                          {completedTests} / {question[0].testCases.length}{" "}
+                        </span>
+                        tests in{" "}
+                        <span className="text-dark text-bigger">
+                          {Math.round(timeToComplete)}ms
+                        </span>
                       </span>
-                      tests in{" "}
-                      <span className="text-dark text-bigger">
-                        {Math.round(timeToComplete)}ms
+                    </p>
+                  </div>
+                ) : (
+                  <div className="text-medium">
+                    <div className="text-fail text-bigger">Failed</div>
+                    <p>
+                      <span className="text-thin text-light">
+                        Completed{" "}
+                        <span className="text-dark text-bigger">
+                          {completedTests} / {question[0].testCases.length}{" "}
+                        </span>
+                        tests
                       </span>
-                    </span>
-                  </p>
-                </div>
-              ) : (
-                <div className="text-medium">
-                  <div className="text-fail text-bigger">Failed</div>
-                  <p>
-                    <span className="text-thin text-light">
-                      Completed{" "}
-                      <span className="text-dark text-bigger">
-                        {completedTests} / {question[0].testCases.length}{" "}
-                      </span>
-                      tests
-                    </span>
-                  </p>
-                  <a className="link" href="#" target="_blank">
-                    View failed test
-                  </a>
-                </div>
-              )}
-            </div>
-          ) : null}
-          <button className="button text-medium" onClick={runTests}>
-            Run Tests
-          </button>
-        </div>
+                    </p>
+                    <a className="link" href="#" target="_blank">
+                      View failed test
+                    </a>
+                  </div>
+                )}
+              </div>
+            ) : null}
+            <button className="button text-medium" onClick={runTests}>
+              Run Tests
+            </button>
+          </div>
+        ) : (
+          <p className="section">No tests available.</p>
+        )}
 
         <div className="section">
           <button
@@ -117,6 +121,19 @@ export default function Problem() {
         <div className="section">
           <h3 className="text-bigger">Explanation:</h3>
           <p>{question[0].solution}</p>
+          {question[0].video ? (
+            <>
+              <h3>Explanation Video: </h3>
+              <iframe
+                width="560"
+                height="315"
+                src={question[0].video}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </>
+          ) : null}
         </div>
       </div>
     </div>

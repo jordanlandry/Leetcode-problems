@@ -136,7 +136,7 @@ body {
 /* Pages */
 .page {
   display: block;
-  margin: auto;
+  margin: 0 auto 64px auto;
   width: 98vw;
   max-width: 1600px;
   min-width: 350px;

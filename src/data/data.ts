@@ -1,3 +1,4 @@
+import q142, { cases142 } from "../problems/q142";
 import q1480, { cases1480 } from "../problems/q1480";
 import q35, { cases35 } from "../problems/q35";
 import q542, { cases542 } from "../problems/q542";
@@ -75,6 +76,20 @@ const data = [
     code: q1480,
     testCases: cases1480,
     difficulty: "easy",
+  },
+  {
+    id: 142,
+    name: "Linked List Cycle II",
+    desc: `Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
+
+    There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to (0-indexed). It is -1 if there is no cycle. Note that pos is not passed as a parameter.`,
+    categories: ["linked list", "hash table", "set"],
+    solution:
+      "When dealing with a circular linked list, you will end up seeing the same nodes over and over again. We can use this information to create the solution to this problem. In order to solve this optimally, we can create a look up table to store all of the values that we have found so far, then we iterate through the linked list until we have found a node that we have already seen before by checking our lookup table, and returning the current value.",
+    video: "https://www.youtube.com/embed/FJ0iX523qEQ",
+    code: q142,
+    testCases: cases142,
+    difficulty: "medium",
   },
 ];
 

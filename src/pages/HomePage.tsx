@@ -11,7 +11,7 @@ export default function HomePage() {
   const [filters, setFilters] = useState<string[]>([]);
   const [search, setSearch] = useState("");
 
-  const aEl = data
+  const linkElements = data
     .sort((a, b) => a.id - b.id)
     .filter((a) => {
       if (!filters[0] && !search) return true;
@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="text-medium">Filters</div>
         {filterElements}
       </div>
-      <div className="link-wrapper text-big section">{aEl}</div>
+      <div className="link-wrapper text-big section">{linkElements}</div>
     </div>
   );
 }
