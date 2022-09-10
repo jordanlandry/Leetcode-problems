@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7bf021c.css",
-    "main.js": "/static/js/main.23314966.js",
+    "main.css": "/static/css/main.aac2beae.css",
+    "main.js": "/static/js/main.13ec5119.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.386b9769.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.e5c12316.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.a7a5e0ee.chunk.js",
@@ -155,8 +155,8 @@
     "react-syntax-highlighter_languages_refractor_xquery.js": "/static/js/react-syntax-highlighter_languages_refractor_xquery.7f571c5d.chunk.js",
     "react-syntax-highlighter_languages_refractor_yaml.js": "/static/js/react-syntax-highlighter_languages_refractor_yaml.77d8c521.chunk.js",
     "index.html": "/index.html",
-    "main.c7bf021c.css.map": "/static/css/main.c7bf021c.css.map",
-    "main.23314966.js.map": "/static/js/main.23314966.js.map",
+    "main.aac2beae.css.map": "/static/css/main.aac2beae.css.map",
+    "main.13ec5119.js.map": "/static/js/main.13ec5119.js.map",
     "refractor-core-import.386b9769.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.386b9769.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.e5c12316.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.e5c12316.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.a7a5e0ee.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.a7a5e0ee.chunk.js.map",
@@ -311,7 +311,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.77d8c521.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.77d8c521.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7bf021c.css",
-    "static/js/main.23314966.js"
+    "static/css/main.aac2beae.css",
+    "static/js/main.13ec5119.js"
   ]
 }
